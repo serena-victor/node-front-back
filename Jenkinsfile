@@ -6,7 +6,7 @@ pipeline {
 			steps {
 				bat 'docker-compose down'
 				bat 'docker-compose up -d'
-                bat 'npm run test'
+                bat 'npm --prefix ./frontend test -- --watchAll=false'
 			}
 		}
 	}
